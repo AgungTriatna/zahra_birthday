@@ -290,74 +290,151 @@ button[type="submit"]:hover {
   z-index: 3;
 }
 
-/* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .login_form{
-    width: 350px;
-    height: 250px;
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
   }
 
   .container {
+    height: auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    padding: 20px 16px 40px;
+  }
+
+  .container > div {
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
     width: 100%;
-    padding: 0 10px;
+    margin: 0 auto 24px;
+  }
+
+  .one {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .two {
+    font-size: clamp(1.1rem, 3.6vw, 1.8rem);
+  }
+
+  .three {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
   }
 
   .four .text-box {
-    width: 90%;
+    width: min(92vw, 620px);
+    padding: 14px;
   }
 
   .text-box .fake-btn {
-    bottom: -50px;
-    right: 5px;
+    display: inline-block;
+    margin-top: 12px;
+    position: static;
   }
 
-  .idea-5 span {
-    display: block;
+  .five {
+    min-height: auto;
+  }
+
+  .five p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    left: auto;
+    margin: 0 0 16px;
+    position: relative;
+    right: auto;
+  }
+
+  .five .idea-5 {
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: clamp(5rem, 18vw, 8rem);
+  }
+
+  .six {
+    top: auto;
+  }
+
+  .six img {
+    height: min(42vw, 260px);
   }
 
   .six .hat {
-    /* top: -20px; */
-    width: 50px;
+    left: 50%;
+    top: -12%;
+    transform: translateX(-50%);
+    width: 70px;
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
   }
 
   .wish h5 {
-    font-size: .8rem;
+    font-size: clamp(0.95rem, 3.2vw, 1.2rem);
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 12px 32px;
+  }
+
+  .one {
+    font-size: 1.9rem;
+  }
+
+  .two {
+    font-size: 1rem;
+  }
+
+  .three {
+    font-size: 1.3rem;
+  }
+
+  .four .text-box {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .five p {
+    font-size: 1rem;
+  }
+
+  .five .idea-5 {
+    font-size: 1.3rem;
+  }
+
+  .idea-6 span {
+    font-size: 4.5rem;
+  }
+
+  .six img {
+    height: 180px;
+  }
+
+  .six .hat {
+    top: -8%;
+    width: 54px;
+  }
+
+  .wish-hbd {
+    font-size: 1.4rem;
+  }
+
+  .wish h5 {
+    font-size: 0.85rem;
+  }
+
+  .nine p {
+    font-size: 1rem;
   }
 }
